@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <style>
+            table, th, td {
+                border: 1px solid black;
+                font-size: 20;
+            }
+            </style>
+            
+         <link rel="stylesheet" href="styles.css"/>
+            
+    </head>
+<body>
+    <h1>Tasklist</h1>
+    <table>
+        <tr>
+            <td style="font-style:oblique">Dev ID</td>
+            <td style="font-style:oblique">Name</td>
+            <td style="font-style:oblique">Last Name</td>
+            <td style="font-style:oblique">Level</td>
+            <td style="font-style:oblique">State</td>
+            <td style="font-style:oblique">Suburb</td>
+            <td style="font-style:oblique">Street</td>
+            <td style="font-style:oblique">Unit</td>
+        </tr>
+        <% for ( var i = 0; i < devDb.length; i++) { %>
+            <tr>
+                <td>
+                    <%= devDb[i].devId %>
+                </td>
+                <td>
+                    <%= devDb[i].name.firstName %>
+                </td>
+                <td>
+                    <%= devDb[i].name.lastName %>
+                </td>
+                <td>
+                    <%= devDb[i].level %>
+                </td>
+                <td>
+                    <%= devDb[i].address.state %>
+                </td>
+                <td>
+                    <%= devDb[i].address.suburb %>
+                </td>
+                <td>
+                    <%= devDb[i].address.street %>
+                </td>
+                <td>
+                    <%= devDb[i].address.unit %>
+                </td>
+            </tr>
+            <% } %>
+
+            <br>
+            <h3>
+                    <a href="/">Home</a>
+            </h3>
+        </body>
+</html>
